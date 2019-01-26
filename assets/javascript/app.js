@@ -41,9 +41,9 @@ $(document).ready(function(){
       $("#questions-box").empty();
       $("#timer").empty();
       $("#timer").hide();
-      $("#correct-answers").text("Correct answers (Woo-hoo!): " + numCorrect);
-      $("#incorrect-answers").text("Incorrect answers (D'oh!): " + numIncorrect);
-      $("#unanswered").text("Skipped questions (Meh): " + numUnanswered);
+      $("#correct-answers").text("Correct answers: " + numCorrect);
+      $("#incorrect-answers").text("Incorrect answers: " + numIncorrect);
+      $("#unanswered").text("Skipped questions: " + numUnanswered);
     }
   }
   
@@ -95,11 +95,10 @@ $(document).ready(function(){
           numCorrect++;
         } else if (userAnswer === "") {
           numUnanswered++;
-        } else if (userAnswer !== correctAnswer) {
+        } else (userAnswer !== correctAnswer) 
           {
             numIncorrect++;
           }
-        }
       }
   
       // show the end page with the score tally
